@@ -28,6 +28,8 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              //"node_modules/@angular/material/slider/_slider_theme.scss",
+              "node_modules/@angular/material/core/_core.scss",
               "src/styles.css"
             ],
             "scripts": []
@@ -128,6 +130,5 @@
         }
       }
     }
-  },
-  "defaultProject": "TestProject"
+  }
 }

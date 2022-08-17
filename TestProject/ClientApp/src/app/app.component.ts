@@ -7,14 +7,12 @@ import { PostService } from './services/post.service';
 })
 
 export class AppComponent implements OnInit {
-  posts: any;
-
+  //ships: any;
+  //planets: any;
   constructor(private service: PostService) { }
 
   ngOnInit() {
-    this.service.getShips().subscribe(response => {
-      this.posts = response;
-      console.log("res: " + response);
-    });
+    //this.service.getShips().subscribe(response => { this.ships = response; });
+    //this.service.getPlanets().subscribe(response => { this.planets = response; });
   }
 }

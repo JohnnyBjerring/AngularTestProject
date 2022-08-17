@@ -1,9 +1,45 @@
 <div class="col-12">
-  <h3>Ships</h3>
-  <mat-slider min="1" max="100" step="1" value="50"></mat-slider>
-  <ul class="list-group">
-    <li *ngFor="let ship of posts.results" class="list-group-item">
-      - {{ ship.name }}
-    </li>
-  </ul>
+  <h3>Swapi API</h3>
+  <button mat-button [matMenuTriggerFor]="menu">Fetch details</button>
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="films">Films</button>
+    <button mat-menu-item [matMenuTriggerFor]="people">People</button>
+    <button mat-menu-item [matMenuTriggerFor]="planets">Planets</button>
+    <button mat-menu-item [matMenuTriggerFor]="species">Species</button>
+    <button mat-menu-item [matMenuTriggerFor]="starships">Starships</button>
+
+    <button mat-menu-item [matMenuTriggerFor]="vehicles">Vehicles</button>
+  </mat-menu>
+
+  <mat-menu #starships="matMenu">
+    <button mat-menu-item *ngFor="let ship of ships.results">{{ ship.name }}</button>
+
+  </mat-menu>
+
+  <mat-menu #planets="matMenu">
+    <button mat-menu-item *ngFor="let planet of aplanets.results">{{ planet.name }}</button>
+
+  </mat-menu>
+
+  <mat-menu #species="matMenu">
+    <button mat-menu-item *ngFor="let specie of aspecies.results">{{ specie.name }}</button>
+
+  </mat-menu>
+
+  <mat-menu #films="matMenu">
+    <button mat-menu-item *ngFor="let film of afilms.results">{{ film.title }}</button>
+
+  </mat-menu>
+
+  <mat-menu #people="matMenu">
+    <button mat-menu-item *ngFor="let peeps of apeople.results">{{ peeps.name }}</button>
+
+  </mat-menu>
+
+  <mat-menu #vehicles="matMenu">
+    <button mat-menu-item *ngFor="let vehicle of avehicles.results">{{ vehicle.name }}</button>
+
+  </mat-menu>
+
 </div>
