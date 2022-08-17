@@ -1,5 +1,6 @@
 <div class="col-12">
   <h3>Ships</h3>
+  <mat-slider min="1" max="100" step="1" value="50"></mat-slider>
   <ul class="list-group">
     <li *ngFor="let ship of posts.results" class="list-group-item">
       - {{ ship.name }}
